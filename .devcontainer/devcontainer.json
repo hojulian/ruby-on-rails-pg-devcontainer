@@ -24,6 +24,7 @@
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
 		"rebornix.Ruby",
+		"vortizhe.simple-ruby-erb",
 		"mtxr.sqltools",
 		"mtxr.sqltools-driver-pg"
 	],
