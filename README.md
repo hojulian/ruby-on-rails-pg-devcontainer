@@ -10,6 +10,8 @@ For ease of use, we also included a generated Rails template using the container
 
 ## Setup
 
+*These steps are only for using devcontainer WITHOUT the given Rails template!*
+
 1. Download this repo
 
 2. Copy the `.devcontainer` folder to your project folder
@@ -26,6 +28,10 @@ Once the setup is completed, there is no need to rebuild the container everytime
 To reopen a project, open the project under the `Welcome` page. A properly setup project's name is always suffixed with `[Dev Container]`.
 
 ![open](images/open_recent.png)
+
+## Pushing to heroku
+
+The devcontainer comes with `heroku-cli` preinstalled, all you need to do before is `heroku login`.
 
 ## Database migrate
 
