@@ -1,5 +1,9 @@
 # ruby-on-rails-pg-devcontainer
 
+This repo contains a setup for devcontainer using Ruby on Rails with Postgres.
+
+For ease of use, we also included a generated Rails template using the container here.
+
 ## Prerequisite
 
 - VSCode with [`Remote - Containers` extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) installed
@@ -41,3 +45,10 @@ Default settings are as follows,
 * host: `localhost`
 
 Settings can be modified under `.devcontainers/docker-compose.yaml`. Remember to rebuild the container after modifying the settings (`Remote-Containers: Rebuild Container` under command palette).
+
+## Versions
+
+* Ruby `2.7.2p137 (2020-10-01 revision 5445e04352) [x86_64-linux]`
+* Rails `6.1.3`
+* Bundler `2.1.4`
+* Heroku-cli `7.50.0`

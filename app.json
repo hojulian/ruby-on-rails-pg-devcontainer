@@ -1,0 +1,8 @@
+{
+  "name": "Ruby on Rails Template: myapp",
+  "description": "A barebones Rails app, which can easily be deployed to Heroku",
+  "image": "heroku/ruby",
+  "repository": "https://github.com/hojulian/ruby-on-rails-pg-devcontainer",
+  "keywords": ["ruby", "rails" ],
+  "addons": ["heroku-postgresql"]
+}
