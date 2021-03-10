@@ -8,18 +8,33 @@ For ease of use, we also included a generated Rails template using the container
 
 - VSCode with [`Remote - Containers` extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) installed
 
-## Setup
+## Uses
 
-*These steps are only for using devcontainer WITHOUT the given Rails template!*
+1. [Use with existing Rails project](#setup-for-existing-project)
+
+2. [Use with the Rails template in this repo](#setup-for-new-project)
+
+## Setup for existing project
 
 1. Download this repo
 
 2. Copy the `.devcontainer` folder to your project folder
 
-3. Open `View -> Command Palette` and input `Remote-Containers: Rebuild and Reopen in Container`
+3. Open project folder in VSCode, open `View -> Command Palette` and input `Remote-Containers: Rebuild and Reopen in Container`
+
     ![palette](images/command_palette.png)
 
 4. Done! Now your project is opened in a Ruby on rails environment!
+
+## Setup for new project
+
+1. Fork this repo
+
+2. Open project folder in VSCode, open `View -> Command Palette` and input `Remote-Containers: Rebuild and Reopen in Container`
+
+    ![palette](images/command_palette.png)
+
+3. Done! Now your project is opened in a Ruby on rails environment!
 
 ## Use
 
