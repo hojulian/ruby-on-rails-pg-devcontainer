@@ -1,6 +1,6 @@
 # ruby-on-rails-pg-devcontainer
 
-This repo contains a setup for devcontainer using Ruby on Rails with Postgres.
+This repo contains a setup for [devcontainer](https://code.visualstudio.com/docs/remote/containers) using Ruby on Rails with Postgres.
 
 For ease of use, we also included a generated Rails template using the container here.
 
@@ -10,9 +10,11 @@ For ease of use, we also included a generated Rails template using the container
 
 ## Uses
 
+There are two different ways to use this repo,
+
 1. [Use with existing Rails project](#setup-for-existing-project)
 
-2. [Use with the Rails template in this repo](#setup-for-new-project)
+2. [Use as a new Rails project](#setup-for-new-project)
 
 ## Setup for existing project
 
@@ -28,13 +30,17 @@ For ease of use, we also included a generated Rails template using the container
 
 ## Setup for new project
 
-1. Fork this repo
+1. Click "Use this template", and setup your desired repo name
 
-2. Open project folder in VSCode, open `View -> Command Palette` and input `Remote-Containers: Rebuild and Reopen in Container`
+    ![template](images/use_this_template.png)
+
+2. Clone the project under your repo
+
+3. Open project folder in VSCode, open `View -> Command Palette` and input `Remote-Containers: Rebuild and Reopen in Container`
 
     ![palette](images/command_palette.png)
 
-3. Done! Now your project is opened in a Ruby on rails environment!
+4. Done! Now your project is opened in a Ruby on rails environment!
 
 ## Use
 
@@ -50,17 +56,43 @@ The devcontainer comes with `heroku-cli` preinstalled, all you need to do before
 
 ## Database migrate
 
-1. Ensure the database configs are setup correctly (`config/database.yml` file)
+1. Ensure the database configs are setup correctly (`config/database.yml` file, see [example](#database.yml-example))
 
 2. Run `bundle` to install all needed gems
 
 3. `bundle exec rake db:migrate`
 
+### `database.yml` example
+
+```yaml
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: myapp_development
+  username: postgres
+  password: postgres
+  host: localhost
+  port: 5432
+
+test:
+  <<: *default
+  database: myapp_test
+
+production:
+  <<: *default
+  database: myapp_production
+  username: myapp
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
+```
+
 ## Database Settings
 
 Default settings are as follows,
 
-* database: `postgres`
 * username: `postgres`
 * password: `postgres`
 * host: `localhost`
