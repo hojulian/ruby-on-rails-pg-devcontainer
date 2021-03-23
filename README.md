@@ -60,7 +60,7 @@ The devcontainer comes with `heroku-cli` preinstalled, all you need to do before
 
 2. Run `bundle` to install all needed gems
 
-3. `bundle exec rake db:migrate`
+3. `bundle exec rails db:migrate`
 
 ### `database.yml` example
 
