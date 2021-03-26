@@ -1,6 +1,6 @@
 # [Choice] Ruby version: 2, 2.7, 2.6, 2.5
 ARG VARIANT=2
-FROM mcr.microsoft.com/vscode/devcontainers/ruby:0-${VARIANT}
+FROM --platform=linux/amd64 mcr.microsoft.com/vscode/devcontainers/ruby:0-${VARIANT}
 
 # Install Rails
 RUN gem install rails webdrivers 
